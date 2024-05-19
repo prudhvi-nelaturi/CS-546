@@ -1,0 +1,41 @@
+{{#if error}}
+<p class="error">{{error}}</p>
+{{/if}}
+
+<div>
+    <div id="error" class="error" hidden></div>
+    <form action="/register" method="POST" id="signup-form" name="signup-form">
+        <label for="firstName">First Name:
+            <input type="text" name="firstName" id="firstName">
+        </label>
+        <label for="lastName">Last Name:
+            <input type="text" name="lastName" id="lastName">
+        </label>
+        <label for="username">Username:
+            <input type="text" name="username" id="username">
+        </label>
+        <label for="password">Password:
+            <input type="password" name="password" id="password">
+        </label>
+        <label for="confirmPassword">Confirm Password:
+            <input type="password" name="confirmPassword" id="confirmPassword">
+        </label>
+        <label for="favoriteQuote">Favorite Quote:
+            <input type="text" name="favoriteQuote" id="favoriteQuote">
+        </label>
+        <label for="themePreference">Theme Preference:
+            <select name="themePreference" id="themePreference">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </label>
+        <label for="role">Role:
+            <select name="role" id="role">
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+            </select>
+        </label>
+        <a href="login">Already have an account? Click here to log-in</a>
+        <button type="submit" name="submitButton" id="submitButton">Register</button>
+    </form>
+</div>

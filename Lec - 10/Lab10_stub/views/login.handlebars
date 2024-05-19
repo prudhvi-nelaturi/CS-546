@@ -1,0 +1,18 @@
+{{#if error}}
+<p class="error">{{error}}</p>
+{{/if}}
+<div id="error" class="error" hidden></div>
+<form action="/login" method="POST" id="signin-form">
+    <label for="username">Username:
+        <input type="text" name="username" id="username" value="{{loginBody.username}}">
+    </label>
+    <br>
+    <br>
+    <label for="password">Password:
+        <input type="password" name="password" id="password" value="{{loginBody.password}}">
+    </label>
+    <br>
+    <br>
+    <a href="register">Click here to register!</a>
+    <button type="submit" name="submitButton" id="submitButton">Login</button>
+</form>
