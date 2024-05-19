@@ -1,0 +1,76 @@
+{{!
+This page will be rendered when the following route is hit: GET http://localhost:3000/movie/:id
+The title of the document should be the name of the Movie. You should have the title set as the <title> element of
+    the HTML document.
+
+    Your page should reference a CSS file, /public/css/styles.css; his file should have at least 10 rulesets you must
+    use at
+    least 5 of them on this page.
+
+
+    }}
+
+    <head>
+        <meta charset="utf-8">
+        <title>{{searchByIdResult.Title}}</title>
+        <link rel="stylesheet" href="/public/css/styles.css">
+    </head>
+
+    <body>
+        <a href="/" class="searchAnotherMovie">Search Another Movie</a>
+        <main>
+            <article>
+                <h1>{{searchByIdResult.Title}}</h1>
+                <img alt="{{searchByIdResult.Title}} Poster" src={{searchByIdResult.Poster}}>
+
+                <h2>Plot</h2>
+                <p>{{searchByIdResult.Plot}}</p>
+                <section>
+                    <h3>Info</h3>
+                    <dl>
+                        <dt>Year Released:</dt>
+                        <dd>{{searchByIdResult.Year}}</dd>
+                        <dt>Rated:</dt>
+                        <dd>{{searchByIdResult.Rated}}</dd>
+                        <dt>Runtime:</dt>
+                        <dd>{{searchByIdResult.Runtime}}</dd>
+                        <dt>Genre(s):</dt>
+                        <dd>{{searchByIdResult.Genre}}</dd>
+                        <dt>Box Office Earnings:</dt>
+                        <dd>{{searchByIdResult.BoxOffice}}</dd>
+                        <dt>DVD Release Date:</dt>
+                        <dd>{{searchByIdResult.DVD}}</dd>
+                    </dl>
+                </section>
+
+                <section>
+                    <h4>Cast and Crew</h4>
+                    <p><strong>Director:</strong> {{searchByIdResult.Director}}</p>
+                    <p><strong>Writer:</strong> {{searchByIdResult.Writer}}</p>
+                    <p><strong>Cast:</strong> {{searchByIdResult.Actors}}</p>
+                </section>
+
+                <section>
+                    <h4>Ratings</h4>
+                    <table class="my_coolratings_table">
+                        <tr>
+                            <th>Source</th>
+                            <th>Rating</th> {{!--...........................If there are no source or rating should
+                            these be hidden or not? Ex: Agent RRR (tt14681510) doesn't have ratings--}}
+                        </tr>
+                        {{#each searchByIdResult.Ratings}}
+
+                        <tr>
+                            <td>{{this.Source}}</td>
+                            <td>{{this.Value}}</td>
+                        </tr>
+                        {{/each}}
+                    </table>
+                </section>
+
+            </article>
+        </main>
+
+
+
+    </body>

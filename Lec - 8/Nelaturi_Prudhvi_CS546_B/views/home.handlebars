@@ -1,0 +1,42 @@
+<!-- 
+This handlebar file will be rendered when the following route is hit: GET http://localhost:3000/
+ 
+ The title of the document should be "Movie Finder". You should have the title set as the <title> element of the HTML document and as an h1 in your document.
+
+Your page should reference a CSS file, /public/css/styles.css; this file should have at least 10 rulesets you must use at least 5 of them on this page. 
+
+
+ -->
+
+<head>
+    <meta charset="utf-8">
+    <title>Movie Finder</title>
+    <link rel="stylesheet" href="/public/css/styles.css">
+</head>
+
+<body>
+
+    <main>
+        <h1>Movie Finder</h1>
+        <p>Welcome to the Application. This website helps you search movies using OMDB API. You can either search with
+            Name
+            or valid OMDBid
+        </p>
+        <form action="searchmovies" method="POST" class="new-searchMovie-form">
+            <label id="searchMoviesByNameLabel">
+                Enter the Title:
+                <input type="text" id="searchMoviesByName" name="searchMoviesByName" placeholder="Ex: Fast and Furious"
+                    class="full-width-input"> {{!--How to retain the value?? like value =
+                {{searchMoviesByName}}???............ --}}
+            </label>
+            <br>
+            <button type="submit">Search</button>
+
+        </form>
+        {{!-- {{{body}}} --}}
+    </main>
+    {{!-- <footer>I'm a footer</footer> --}}
+
+
+
+</body>

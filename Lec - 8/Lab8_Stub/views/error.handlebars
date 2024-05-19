@@ -1,0 +1,35 @@
+{{!
+You can use this template to render any errors on your site if you wish
+}}
+
+<head>
+    <meta charset="utf-8">
+    <title>Error</title>
+    <link rel="stylesheet" href="/public/css/styles.css">
+</head>
+
+<body>
+    {{#if isSearchByName}}
+    <p class="not-found">We're sorry, but no results were found for {{searchMoviesByName}}.</p>
+    {{/if}}
+
+    {{#if hasErrors}}
+    <ul class="error-list">
+        {{#each errors}}
+        <li class="error">
+            <p> {{this}}</p>
+        </li>
+        {{/each}}
+    </ul>
+    {{/if}}
+
+    {{#if isSearchById}}
+    <ul class="error-list">
+        {{#each errors}}
+        <li class="error">
+            <p> {{this}}</p>
+        </li>
+        {{/each}}
+    </ul>
+    {{/if}}
+</body>
