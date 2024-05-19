@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Finder</title>
+    <link rel="stylesheet" href="/public/css/styles.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Movie Finder</h1>
+        </header>
+
+        <form id="searchMovieForm">
+            <br>
+            <br>
+            <label for="movie_search_term">Search for a Movie</label>
+            <input id="movie_search_term" type="text">
+            <br>
+            <br>
+            <button type="submit">Search Movies</button>
+        </form>
+        <div id="error" class="error" hidden></div>
+        <ul id="searchResults" hidden></ul>
+        <div id="movieDetails" hidden></div>
+        <br>
+        <a id="rootLink" href="/" hidden>New Search</a>
+        <footer>
+            <p>Prudhvi Nelaturi</p>
+            <p>CWID: 20018695 </p>
+            <p>Email: pnelatur@stevens.edu </p>
+        </footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="/public/js/main.js"></script>
+
+</body>
+
+</html>
